@@ -68,7 +68,7 @@ static uint8_t LYRIQ_OV50A_eeprom[LYRIQ_OV50A_EEPROM_SIZE] = {0};
 static mot_calibration_status_t calibration_status = {CRC_FAILURE};
 static mot_calibration_mnf_t mnf_info = {0};
 
-extern adaptor_i2c_wr_seq_p8(struct IMGSENSOR_I2C_CFG *pi2c_cfg,
+extern kal_uint16 adaptor_i2c_wr_seq_p8(struct IMGSENSOR_I2C_CFG *pi2c_cfg,
 		kal_uint16 addr, kal_uint16 reg, u8 *p_vals, kal_uint16 n_vals);
 
 static uint8_t crc_reverse_byte(uint32_t data)
