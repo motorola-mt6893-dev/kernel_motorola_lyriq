@@ -1466,6 +1466,15 @@ config BUILD_ARM64_DT_OVERLAY
 	  This option enables support for DT overlay compilation.
 	  Enabling this option sets required flags to add DT
 	  overlay in the compilation.
+
+
+config BUILD_ARM64_DT_OVERLAY_IMAGE_NAMES
+	string "Default dtb overlay names"
+	depends on BUILD_ARM64_DT_OVERLAY
+	help
+	  Space separated list of names of dtbs to append when
+	  building a concatenated overlay image
+
 endmenu
 
 config COMPAT
