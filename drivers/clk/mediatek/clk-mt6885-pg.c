@@ -4977,7 +4977,7 @@ struct mtk_power_gate {
 
 /* MT6893: TODO:FIXME: all values needed to be verified */
 /* MT6893: preclks */
-struct mtk_power_gate scp_clks[] __initdata = {
+struct mtk_power_gate scp_clks[] = {
 	PGATE(SCP_SYS_MD1, "PG_MD1", NULL, NULL, SYS_MD1),
 	PGATE(SCP_SYS_CONN, "PG_CONN", NULL, NULL, SYS_CONN),
 	PGATE(SCP_SYS_MDP, "PG_MDP", NULL, "mdp_sel", SYS_MDP),
@@ -5012,7 +5012,7 @@ struct mtk_power_gate scp_clks[] __initdata = {
 							"dsp7_sel", SYS_VPU),
 };
 
-static void __init init_clk_scpsys(struct clk_onecell_data *clk_data)
+static void init_clk_scpsys(struct clk_onecell_data *clk_data)
 {
 	int i;
 	struct clk *clk;
