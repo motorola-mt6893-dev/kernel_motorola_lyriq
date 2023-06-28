@@ -48,7 +48,7 @@ ifneq ($(DTBO_NAMES),)
 DTB_LIST += $(addsuffix .dtbo,$(DTBO_NAMES))
 endif
 
-targets += $(DTB_LIST)
+dtb-y += $(DTB_LIST)
 
 ifeq ($(strip $(CONFIG_BUILD_ARM64_DT_OVERLAY)), y)
 dtbo-y += $(addsuffix .dtbo, $(subst $\",,$(CONFIG_BUILD_ARM64_DT_OVERLAY_IMAGE_NAMES)))
